@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>As I've Wr13ten... | Acertijo Código Base64</title>
+		<link rel="icon" type="image/png" href="Icon_Tab.png">
+		<link rel="stylesheet" href="style_as_i_have_written.css">		
+	</head>
+	<body>
+		<div class="vhs-static"></div>
+		
+		<center>
+				<h2 class="h2white">Acertijo de Desencriptación (3/3)</h2>
+				</br></br>
+				<hr class="double-line">
+				<p style="color: #ffd700;">Descifra el mensaje en Base64.</p>
+				<p>Puedes usar un decodificador de Base64 en linea.</p>
+			<hr>
+			<p>Por un mañana sin lagrimas solo falta decir:</p>
+			<input type="text" class="input-box" id="codigoInput" placeholder="Introduce el código..." 			style="padding:10px; width:250px; font-size:16px;">
+			<button onclick="verificarCodigo()" style="padding:10px 20px; font-size:16px;">					Enviar</button>
+
+
+			<script>
+				function verificarCodigo() {
+				const input = document.getElementById("codigoInput").value.trim();
+				if (input === "See you Tomorrow") {
+				window.location.href = "See you Tomorrow.html";
+					} else {
+						alert("Código incorrecto");
+					}
+				}
+			</script>
+		</center>
+
+			<audio id="morse-audio" preload="auto" loop>
+				<source src="NewPage-Cdk3jmGc.mp3" type="audio/mpeg">
+			</audio>
+		<script>
+    			window.addEventListener("click", () => {
+       			document.getElementById("morse-audio").play();
+   			});
+		</script>
+	</body>
+</html>

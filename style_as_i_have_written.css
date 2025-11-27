@@ -1,0 +1,225 @@
+body {
+	background-image:url('Fondo.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	color: #434A54;
+}
+
+.vhs-static {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url('static.gif');
+    mix-blend-mode: overlay;
+    opacity: 0.60;
+    animation: flicker 0.2s infinite;
+    z-index: 5;
+}
+
+
+.cursor {
+    display: inline-block;
+    color: #ffffff;
+    animation: blink 1s step-end infinite;
+    font-weight: 700
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    margin-top: 120px;
+}
+
+.icon-box {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.icon-box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.icon-box p {
+    color: white;
+    font-size: 18px;
+}
+
+.icon-box:hover {
+    transform: scale(1.07);
+    border-color: white;
+}
+
+.input-box {
+	width: 300px;
+	padding: 10px;
+	border-radius: 10px;
+	border: none;
+	font-size: 18px;
+	outline: none;
+}
+
+button {
+	padding: 10px 20px;
+	border-radius: 10px;
+	border: none;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.character {
+	position: fixed;
+	overflow: visible;
+	bottom: -20px;
+	right: 60px;
+	z-index: 3
+}
+
+.character img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.Message {
+	position: fixed;
+	bottom: 140px;
+	right: 180px;
+	z-index: 9999;
+	background: #2b2b2b;
+	padding: 12px 14px;
+	border: 2px solid #e0b4ff;
+	border-radius: 10px;
+	max-width: 170px;
+	font-size: 20px;
+	box-shadow: 0 0 6px rgba(0,0,0,0.3);
+	color: #fff;
+	text-shadow: 0 0 6px #ff9bff;
+}
+
+@keyframes blink {
+    0%,50% {
+        opacity: 1
+    }
+
+    51%,to {
+        opacity: 0
+    }
+}
+
+@keyframes flicker {
+    0%   { opacity: 0.18; }
+    50%  { opacity: 0.28; }
+    100% { opacity: 0.18; }
+}
+
+
+h1 {
+	color:#ffffff;
+	font-size:60px;
+	font-family:"Alegreya", serif;
+	font-style: italic;
+	margin-bottom:-20;
+}
+
+.h1normal {
+	transform:translateY(-30px);
+}
+
+
+h2 {
+	color:#ADD8E6;
+	font-size:30px;
+	font-family:Barlow;
+	margin-bottom:40;
+	font-weight:normal;
+}
+
+.h2white {
+	color:white;
+	margin-bottom:-30;
+}
+
+.h2red {
+	color:#DC143C;
+}
+
+
+p {
+	font-size: 20px;
+	color: white;
+}
+
+.abajo {
+	margin-bottom:-10;
+}
+
+.Philia {
+	opacity: 0.2;
+}
+
+hr {
+
+}
+
+.double-line {
+	width: 85%;
+	margin: 40px auto;
+	border: none;
+	height: 3px;
+	background:
+		linear-gradient(to right, transparent, white, transparent),
+		linear-gradient(to right, transparent, white, transparent);
+	background-size: 100% 1px, 100% 1px;
+	background-position: 0 0, 0 100%;
+	background-repeat: no-repeat;
+	opacity: 0.6;
+}
+
+.cursorSeeyouTomorrow {
+    animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+#extra {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.double-line {
+    width: 60%;
+    margin: 0 auto 10px auto;
+    border: none;
+    border-top: 3px double white;
+}
+
+#extra p {
+    font-size: 24px;
+    color: white;
+    font-family: "Alegreya", serif;
+}

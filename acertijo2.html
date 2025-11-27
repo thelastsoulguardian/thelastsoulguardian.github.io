@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>As I've Wr13ten... | Acertijo Código Cesar</title>
+		<link rel="icon" type="image/png" href="Icon_Tab.png">
+		<link rel="stylesheet" href="style_as_i_have_written.css">		
+	</head>
+	<body>
+		<div class="vhs-static"></div>
+		
+		<center>
+				<h2 class="h2white">Acertijo de Desencriptación (2/3)</h2>
+				</br></br>
+				<hr class="double-line">
+				<p style="color: #ffd700;">Descifra el mensaje en Código César.</p>
+				<p style="color: #ffd700;">El desplazamiento de letras es hacía la derecha (los 				números "2", "2" y "1", Mayusculas y minusculas deben permanecer iguales).</p>
+				<p><u>Pista</u>: El Robot Rosa del Acertijo 1 te dió una ubicación.</p>
+
+					<div style="text-align:center;">
+					<img src="Cesar.webp" alt="Icono" style="width:500px;">
+					</div>		
+
+			<hr>
+			<p>Introduce el código completo que obtuviste al resolver la segunda desencriptación.</p>
+			<p>Solo falta cruzar un último umbral...</p>
+			<input type="text" class="input-box" id="codigoInput" placeholder="Introduce el código..." 			style="padding:10px; width:250px; font-size:16px;">
+			<button onclick="verificarCodigo()" style="padding:10px 20px; font-size:16px;">					Enviar</button>
+
+
+			<script>
+				function verificarCodigo() {
+				const input = document.getElementById("codigoInput").value.trim();
+				if (input === "U2VlIHlvdSBUb21vcnJvdw==") {
+				window.location.href = "acertijo3.html";
+					} else {
+						alert("Código incorrecto");
+					}
+				}
+			</script>
+		</center>
+
+			<div class="icon-container">
+				<a href="Proyecto_Integrador.html" class="icon-box">
+					<img src="acertijo1.png" alt="Icono 1">
+					<p class="abajo">Volver</p>
+				</a>
+			</div>
+
+
+
+			<audio id="morse-audio" preload="auto" loop>
+				<source src="NewPage-Cdk3jmGc.mp3" type="audio/mpeg">
+			</audio>
+		<script>
+    			window.addEventListener("click", () => {
+       			document.getElementById("morse-audio").play();
+   			});
+		</script>
+	</body>
+</html>

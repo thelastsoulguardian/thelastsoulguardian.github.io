@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>As I've Wr13ten... | Acertijo Código Base64</title>
+		<link rel="icon" type="image/png" href="Icon_Tab.png">
+		<link rel="stylesheet" href="style_as_i_have_written.css">		
+	</head>
+	<body>
+		<div class="vhs-static"></div>
+		
+			<div style="
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				height:100vh;
+				">
+					<h1 class="h1normal" id="typewriter">Haz clic para 							continuar...<span class="cursorSeeyouTomorrow">_</span>
+					</h1>
+						<div style="text-align:center;">
+							<img src="Icon_Tab.png" alt="Icono" style="width:100px; 
+							margin-bottom:10px;">
+						</div>
+					<div id="extra" style="display:none; text-align:center; margin-						top:20px;">
+						<hr class="double-line">
+						<p style="font-size:24px;">Juego terminado</p>
+					</div>
+			</div>
+
+
+
+
+			<audio id="morse-audio" preload="auto" loop>
+				<source src="NewPage-Cdk3jmGc.mp3" type="audio/mpeg">
+			</audio>
+		<script>
+    			window.addEventListener("click", () => {
+       			document.getElementById("morse-audio").play();
+   			});
+		</script>
+
+		<script>
+			const originalText = "Haz clic para continuar...";
+			const newText = "See you Tomorrow...";
+				let hasClicked = false;
+
+			const element = document.getElementById("typewriter");
+
+			function deleteText(text, callback) {
+			let i = text.length;
+
+			const interval = setInterval(() => {
+				element.innerHTML = text.slice(0, i) + "<span class='cursor'>_</span>";
+				i--;
+
+			if (i < 0) {
+				clearInterval(interval);
+				callback();
+				}
+			}, 80);
+		}
+
+		function typeText(text, callback) {
+		let i = 0;
+
+		const interval = setInterval(() => {
+			element.innerHTML = text.slice(0, i) + "<span class='cursor'>_</span>";
+			i++;
+
+		if (i > text.length) {
+ 			clearInterval(interval);
+			setTimeout(callback, 4500);
+			}
+		}, 80);
+	}
+
+	document.addEventListener("click", () => {
+    		if (hasClicked) return;
+		hasClicked = true;
+
+		document.getElementById("morse-audio").play();
+
+		deleteText(originalText, () => {
+			typeText(newText, () => {
+			document.getElementById("extra").style.display = "block";
+        			});
+    			});
+		});
+	</script>
+
+	</body>
+</html>
